@@ -1,0 +1,206 @@
+.home-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.icon img {
+    width: 50px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+}
+
+
+.title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Info Box */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 2rem;
+}
+
+.info-box a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.info-box a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 12px);
+    background-color: #000;
+    transition: 0.3s ease-in-out;
+    transform: scaleY(1);
+}
+
+.info-box a:hover::before {
+    transform: scaleY(0);
+}
+
+.info-box a::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% - 12px);
+    background-color: #000;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+}
+
+.info-box a:hover::after {
+    transform: scaleX(0);
+}
+
+.info-box a span {
+    position: relative;
+    z-index: 3;
+}
+
+.info-box button {
+    background-color: none;
+    text-decoration: none;
+    background-color: #000;
+    border: none;
+}
+
+/* Grid Section */
+.grid-section {
+    flex: 1;
+}
+
+.flyer-container {
+    width: 30vw;
+}
+
+.flyer-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.chevron-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: black;
+    padding: 8px;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.icon-size {
+    width: 24px;
+    height: 24px;
+}
+
+/* Down Arrow */
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.arrow-icon {
+    width: 32px;
+    height: 32px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column-reverse; /* Imagen primero en mobile */
+    }
+
+    .grid-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .flyer-container {
+        width: 100%;
+        max-width: 600px; /* Para que no sea demasiado grande en pantallas grandes */
+    }
+
+    .flyer-container img {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        border-radius: 8px;
+    }
+}

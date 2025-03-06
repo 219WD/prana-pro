@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: "Work Sans", sans-serif;
+}
+
+.home-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.icon img {
+    width: 50px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+    }
+}
+
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+}
+
+
+.title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Info Box */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.circle-icon {
+    padding: 1rem 0;
+}
+
+.circle-icon img {
+    width: 30px !important;
+}
+
+.info-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Grid Section */
+.grid-section {
+    flex: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.grid-card {
+    background: #000;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+
+.chevron-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: black;
+    padding: 8px;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.icon-size {
+    width: 24px;
+    height: 24px;
+}
+
+/* Down Arrow */
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.arrow-icon {
+    width: 32px;
+    height: 32px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
