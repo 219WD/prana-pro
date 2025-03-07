@@ -7,8 +7,8 @@ import Footer from '../components/Footer.jsx'
 const HomeScreen = () => {
   return (
     <div className='container'>
-        <Second />
         <Hero />
+        <Second />
         <Third />
         <Footer />
     </div>
