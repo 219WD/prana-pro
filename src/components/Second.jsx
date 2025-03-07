@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Second.css";
 import Tiki from '../assets/Blanco-04.svg';
-import Flyer from '../assets/1000X1000px.png';
+import Flyer from '../assets/1000X1000px.jpg';
 import FacebookPixel from "react-facebook-pixel";
 
 const precioEntrada = 15000;
