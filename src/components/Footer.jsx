@@ -65,7 +65,7 @@ export default function Footer() {
                             <Link to="https://www.instagram.com/prana.pro/" className="social-icon">
                                 <FontAwesomeIcon icon={faInstagram} />
                             </Link>
-                            <Link to="https://wa.me/1234567890?text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n" className="social-icon">
+                            <Link to="https://wa.me/3816574462?text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n" className="social-icon">
                                 <FontAwesomeIcon icon={faWhatsapp} />
                             </Link>
                         </div>
@@ -86,10 +86,10 @@ export default function Footer() {
                     <div className="footer-section">
                         <h3 className="footer-title">Saber Más</h3>
                         <ul className="footer-list">
-                            <li><a href="https://wa.me/1234567890?text=Lugar%20del%20Evento%3F" target="_blank" rel="noopener noreferrer">Lugar del Evento</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Puntos%20de%20Venta%3F" target="_blank" rel="noopener noreferrer">Puntos de Venta</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Comprar%20Entrada" target="_blank" rel="noopener noreferrer">Comprar Entrada</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Botón%20de%20Arrepentimiento" target="_blank" rel="noopener noreferrer">Botón de Arrepentimiento</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Lugar%20del%20Evento%3F" target="_blank" rel="noopener noreferrer">Lugar del Evento</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Puntos%20de%20Venta%3F" target="_blank" rel="noopener noreferrer">Puntos de Venta</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Comprar%20Entrada" target="_blank" rel="noopener noreferrer">Comprar Entrada</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Botón%20de%20Arrepentimiento" target="_blank" rel="noopener noreferrer">Botón de Arrepentimiento</a></li>
                         </ul>
 
                     </div>
@@ -98,10 +98,10 @@ export default function Footer() {
                     <div className="footer-section">
                         <h3 className="footer-title">Preguntas Frecuentes</h3>
                         <ul className="footer-list">
-                            <li><a href="https://wa.me/1234567890?text=Contacto%3F" target="_blank" rel="noopener noreferrer">Número de Contacto</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Consultar%20Promos" target="_blank" rel="noopener noreferrer">Consultar Promos</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Cómo%20llegar%3F" target="_blank" rel="noopener noreferrer">Cómo llegar</a></li>
-                            <li><a href="https://wa.me/1234567890?text=Ubicación%3F" target="_blank" rel="noopener noreferrer">Ubicación</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Contacto%3F" target="_blank" rel="noopener noreferrer">Número de Contacto</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Consultar%20Promos" target="_blank" rel="noopener noreferrer">Consultar Promos</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Cómo%20llegar%3F" target="_blank" rel="noopener noreferrer">Cómo llegar</a></li>
+                            <li><a href="https://wa.me/3816574462?text=Ubicación%3F" target="_blank" rel="noopener noreferrer">Ubicación</a></li>
                         </ul>
                     </div>
                 </div>

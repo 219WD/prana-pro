@@ -13,7 +13,7 @@ function App() {
     // Inicializar el Pixel de Meta con el Pixel ID desde las variables de entorno
     const pixelId = import.meta.env.VITE_PIXEL_ID;
     if (!pixelId) return; // Si no hay Pixel ID, no hacemos nada
-  
+
     try {
       FacebookPixel.init(pixelId);
       FacebookPixel.pageView();
@@ -30,31 +30,35 @@ function App() {
   return (
     <BrowserRouter>
       <Helmet>
-        <title>Prana Tucumán</title>
-        <link rel="icon" type="image/png" href="/site-logo.png" />
-        <meta name="description" content="219Labs es una agencia digital en Tucumán especializada en desarrollo web, software y marketing digital. Transformamos tu negocio digitalmente con soluciones innovadoras y creativas." />
-        <meta name="keywords" content="Agencia Digital Tucumán, Diseño y Desarrollo Web, Marketing Digital, Software y Desarrollo Web" />
-        <meta name="author" content="219Labs CanepaDev" />
+        <title>Prana Tucumán - Música y Experiencias</title>
+        <link rel="icon" type="image/svg+xml" href="/Blanco-02.svg" />
+        <meta name="description" content="Prana Tucumán es el punto de encuentro para los amantes de la música electrónica. Vive experiencias únicas con los mejores artistas en un ambiente inigualable." />
+        <meta name="keywords" content="Prana Tucumán, música electrónica, eventos, fiestas, DJs, open air, club, Tucumán, Argentina" />
+        <meta name="author" content="Prana Tucumán" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "219Labs",
+            "@type": "MusicVenue",
+            "name": "Prana Tucumán",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Mate de Luna 1269",
+              "streetAddress": "Yerba Buena Tucuman",
               "addressLocality": "Tucumán",
               "addressRegion": "T",
               "postalCode": "4000",
-              "addressCountry": "AR",
+              "addressCountry": "AR"
             },
-            "telephone": "+5493816671884",
-            "description":
-              "Agencia de desarrollo web, software y marketing digital de Tucuman. 219LABS ha estado a la vanguardia de la innovación digital, creando productos web3 de última generación y brindando soporte de diseño excepcional tanto para startups como para grandes corporaciones.",
-            "url": "https://219labs.vercel.app/",
+            "telephone": "3816574462",
+            "description": "Espacio dedicado a la música electrónica y las experiencias sensoriales en Tucumán. Eventos con DJs nacionales e internacionales.",
+            "url": "www.prana-pro.com",
+            "sameAs": [
+              "https://www.instagram.com/prana.pro",
+              "https://www.facebook.com/profile.php?id=61573448551051"
+            ]
           })}
         </script>
       </Helmet>
+
       <NavBar />
       <Routes>
         <Route path="/" element={<HomeScreen />} />

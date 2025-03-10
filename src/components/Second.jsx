@@ -29,7 +29,7 @@ const Second = () => {
 
                         <div className="info-box">
                             <button onClick={handlePurchaseClick}>
-                                <a href="https://wa.me/1234567890?text=Comprar%20Entrada" target="_blank" rel="noopener noreferrer"><span>Comprar Entradas</span></a>
+                                <a href="https://wa.me/3816574462?text=Comprar%20Entrada" target="_blank" rel="noopener noreferrer"><span>Comprar Entradas</span></a>
                             </button>
                         </div>
                     </div>
