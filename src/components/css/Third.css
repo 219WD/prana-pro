@@ -137,6 +137,8 @@ body {
     padding: 8px;
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
+    cursor: pointer;
+    border: none;
 }
 
 .icon-size {

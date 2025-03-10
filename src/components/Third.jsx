@@ -10,6 +10,9 @@ import Image4 from '../assets/flyer1.jpg';
 const images = [Image1, Image2, Image3, Image4]; // Arreglo con las imágenes
 
 const Third = () => {
+    const handleChevronClick = () => {
+        window.open("https://drive.google.com/drive/folders/1sXeNuPoRZwi4eFKCtI4-mWnZMMrVn9Zy", "_blank");
+    };
     return (
         <div className="home-container" id="galery">
             <div className="content-wrapper">
@@ -44,7 +47,7 @@ const Third = () => {
                             {images.map((image, index) => (
                                 <div key={index} className="grid-card">
                                     <img src={image} alt={`Grid item ${index + 1}`} className="grid-image" />
-                                    <div className="chevron-icon">
+                                    <button className="chevron-icon" onClick={handleChevronClick}>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
@@ -57,7 +60,7 @@ const Third = () => {
                                         >
                                             <path d="M9 18l6-6-6-6" />
                                         </svg>
-                                    </div>
+                                    </button>
                                 </div>
                             ))}
                         </div>
