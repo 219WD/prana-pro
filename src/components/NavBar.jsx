@@ -70,7 +70,7 @@ const NavBar = () => {
     return (
         <header className="header">
             <div className="logo">
-                <img src={Logo} alt="Prana Logo" />
+                <img src={Logo} alt="Prana Logo" className="logoNav" />
             </div>
 
             <nav className="nav">
@@ -80,7 +80,7 @@ const NavBar = () => {
             </nav>
 
             <div className="icon">
-                <img src={Bacteria} alt="Decorative Icon" />
+                <img src={Bacteria} alt="Decorative Icon" className="bacteria" />
             </div>
 
             <div className="hamburger-icon" onClick={toggleMenu}>

@@ -12,8 +12,14 @@ function App() {
   useEffect(() => {
     // Inicializar el Pixel de Meta con el Pixel ID desde las variables de entorno
     const pixelId = import.meta.env.VITE_PIXEL_ID;
-    FacebookPixel.init(pixelId);
-    FacebookPixel.pageView();
+    if (!pixelId) return; // Si no hay Pixel ID, no hacemos nada
+  
+    try {
+      FacebookPixel.init(pixelId);
+      FacebookPixel.pageView();
+    } catch (error) {
+      console.warn("Facebook Pixel bloqueado o no cargado:", error);
+    }
 
     // Inicializar Lenis cuando se monta el componente
     const cleanupLenis = initLenis();
