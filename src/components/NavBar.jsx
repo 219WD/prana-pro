@@ -33,9 +33,10 @@ const NavBar = () => {
     }, []);
 
     const handleLinkClick = (e) => {
-        e.preventDefault(); // Evita el comportamiento predeterminado
-        const target = document.querySelector(e.target.getAttribute("href"));
-        
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute("href"); // Corregido para evitar problemas al hacer clic en el texto
+        const target = document.querySelector(targetId);
+
         if (target) {
             gsap.to(".mobile-menu", {
                 x: "100%",
@@ -50,8 +51,6 @@ const NavBar = () => {
                     });
                 }
             });
-        } else {
-            setMenuOpen(false);
         }
     };
 

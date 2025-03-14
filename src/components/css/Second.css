@@ -188,6 +188,7 @@
 @media (max-width: 1024px) {
     .main-content {
         flex-direction: column-reverse; /* Imagen primero en mobile */
+        margin-top: 2rem;
     }
 
     .grid-section {
