@@ -37,7 +37,7 @@ const Second = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span>Obtene tu beneficio aqui</span>
+                  <span>Comprar Entradas</span>
                 </a>
               </button>
             </div>
