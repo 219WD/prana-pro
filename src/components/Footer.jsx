@@ -5,13 +5,13 @@ import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-sv
 import "./Footer.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Importa el plugin
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; 
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin); // Registra ambos plugins
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin); 
 
 export default function Footer() {
     const handleLinkClick = (e) => {
-        e.preventDefault(); // Previene el comportamiento por defecto
+        e.preventDefault(); 
 
         const target = document.querySelector(e.target.getAttribute("href"));
         if (target) {
@@ -29,7 +29,6 @@ export default function Footer() {
         <footer className="footer" id="contact">
             <div className="footer-container">
                 <div className="footer-grid">
-                    {/* Profile Section */}
                     <div className="footer-section">
                         <div className="profile">
                             <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464.53 155.93" fill="#fff" width="200px">
@@ -71,7 +70,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Explore Section */}
                     <div className="footer-section">
                         <h3 className="footer-title">Navegación</h3>
                         <ul className="footer-list">
@@ -82,7 +80,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Know More Section */}
                     <div className="footer-section">
                         <h3 className="footer-title">Saber Más</h3>
                         <ul className="footer-list">
@@ -94,7 +91,6 @@ export default function Footer() {
 
                     </div>
 
-                    {/* About Section */}
                     <div className="footer-section">
                         <h3 className="footer-title">Preguntas Frecuentes</h3>
                         <ul className="footer-list">
@@ -106,7 +102,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom Section */}
                 <div className="footer-bottom">
                     <p>© 219Labs. Todos los derechos reservados. 2025</p>
                     <div className="footer-links">

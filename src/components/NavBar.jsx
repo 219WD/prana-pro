@@ -34,7 +34,7 @@ const NavBar = () => {
 
     const handleLinkClick = (e) => {
         e.preventDefault();
-        const targetId = e.currentTarget.getAttribute("href"); // Corregido para evitar problemas al hacer clic en el texto
+        const targetId = e.currentTarget.getAttribute("href");
         const target = document.querySelector(targetId);
 
         if (target) {

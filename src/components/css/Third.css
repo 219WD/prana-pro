@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    background: black;
-    color: white;
+    background: white;
+    color: #000;
     font-family: "Work Sans", sans-serif;
 }
 
@@ -29,7 +29,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -45,7 +44,6 @@ body {
     width: 50px;
 }
 
-/* Main Content */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -62,7 +60,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+    justify-content: flex-end; 
 }
 
 
@@ -81,7 +79,6 @@ body {
     line-height: 1.6;
 }
 
-/* Info Box */
 .info-box {
     display: flex;
     align-items: center;
@@ -101,7 +98,6 @@ body {
     line-height: 1.5;
 }
 
-/* Grid Section */
 .grid-section {
     flex: 1;
 }
@@ -113,7 +109,7 @@ body {
 }
 
 .grid-card {
-    background: #000;
+    background: #fff;
     border-radius: 12px;
     aspect-ratio: 1;
     position: relative;
@@ -123,8 +119,8 @@ body {
 .grid-image {
     width: 100%; 
     height: 100%; 
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    border-radius: 8px; /* Opcional: bordes redondeados */
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 
@@ -146,7 +142,6 @@ body {
     height: 24px;
 }
 
-/* Down Arrow */
 .arrow-container {
     display: flex;
     justify-content: center;

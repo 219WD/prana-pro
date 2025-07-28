@@ -16,17 +16,14 @@ const Third = () => {
     return (
         <div className="home-container" id="galery">
             <div className="content-wrapper">
-
-                {/* Main content */}
                 <main className="main-content">
-                    {/* Left column - Text content */}
                     <div className="text-section">
                         <div>
                             <h1 className="title">
                                 We all need <span className="highlight">prana</span>
                             </h1>
                             <p className="description">
-                            Revive la energía del 22/11 en Prana. Una noche donde la música nos llevó más allá, con el sonido envolvente de Bob Tosh. Cada imagen captura la esencia de una fiesta inolvidable. Explora la galería y siente de nuevo cada beat, cada conexión, cada instante que hizo de esta fecha algo único.
+                            Revive la energía del 03/05 en Prana. Una noche donde la armonía se restauró y la música nos conectó en lo más profundo, con el sonido envolvente de CID INC y Dmitry Molosh por primera vez juntos en Tucumán. Cada imagen captura la esencia de un Open Air inolvidable. Explorá la galería y volvé a sentir cada beat, cada conexión, cada instante de pura magia.
                             </p>
                         </div>
 
@@ -41,7 +38,6 @@ const Third = () => {
                         </div>
                     </div>
 
-                    {/* Right column - Grid of cards */}
                     <div className="grid-section">
                         <div className="grid-container">
                             {images.map((image, index) => (
@@ -67,7 +63,6 @@ const Third = () => {
                     </div>
                 </main>
 
-                {/* Down arrow at the bottom */}
                 <div className="arrow-container">
                     <div className="scroll-indicator">↓</div>
                 </div>

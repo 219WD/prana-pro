@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Second.css";
 import Tiki from "../assets/Blanco-04.svg";
-import Flyer from "../assets/1000X1000px.jpg";
+import Flyer from "../assets/Flyer-principal -posteo.png";
 import FacebookPixel from "react-facebook-pixel";
 
 const precioEntrada = 15000;
@@ -22,11 +22,10 @@ const Second = () => {
                 Save the <span className="highlight">date</span>
               </h1>
               <p className="description">
-                El 3 de mayo la música nos une en una noche única donde la
-                armonía se restaura y la energía fluye. CID INC y Dmitry Molosh
-                llegan por primera vez juntos a Tucumán para un evento Open Air
-                imperdible. Sumérgete en el sonido, vibra con cada beat y déjate
-                llevar por la magia.
+                Se viene el calorcito… y Prana te acerca a La Playa con un
+                festival de pura música y la energía necesaria para darle la
+                bienvenida a la primavera. Agendá este 20 de Septiembre en Tafi
+                Viejo. Y conseguí ya mismo tus Early Birds.
               </p>
             </div>
 

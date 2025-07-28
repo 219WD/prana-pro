@@ -13,7 +13,6 @@
     padding: 40px 20px;
 }
 
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +28,6 @@
     width: 50px;
 }
 
-/* Main Content */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -46,7 +44,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+    justify-content: flex-end; 
+    margin-bottom: 2rem;
 }
 
 
@@ -65,7 +64,6 @@
     line-height: 1.6;
 }
 
-/* Info Box */
 .info-box {
     display: flex;
     align-items: center;
@@ -77,9 +75,9 @@
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    border: 2px solid #fefefe;
+    border: 2px solid #000;
     text-transform: uppercase;
-    color: #fefefe;
+    color: #000;
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
@@ -92,7 +90,7 @@
     left: -2px;
     width: calc(100% + 4px);
     height: calc(100% - 12px);
-    background-color: #000;
+    background-color: #fff;
     transition: 0.3s ease-in-out;
     transform: scaleY(1);
 }
@@ -108,7 +106,7 @@
     top: -2px;
     height: calc(100% + 4px);
     width: calc(100% - 12px);
-    background-color: #000;
+    background-color: #fff;
     transition: 0.3s ease-in-out;
     transform: scaleX(1);
     transition-delay: 0.5s;
@@ -126,11 +124,10 @@
 .info-box button {
     background-color: none;
     text-decoration: none;
-    background-color: #000;
+    background-color: #fff;
     border: none;
 }
 
-/* Grid Section */
 .grid-section {
     flex: 1;
 }
@@ -142,6 +139,7 @@
 .flyer-container img {
     width: 100%;
     border-radius: 8px;
+    margin-top: 3rem;
 }
 
 .chevron-icon {
@@ -160,7 +158,6 @@
     height: 24px;
 }
 
-/* Down Arrow */
 .arrow-container {
     display: flex;
     justify-content: center;
@@ -187,7 +184,7 @@
 
 @media (max-width: 1024px) {
     .main-content {
-        flex-direction: column-reverse; /* Imagen primero en mobile */
+        flex-direction: column-reverse; 
         margin-top: 2rem;
     }
 
@@ -199,11 +196,11 @@
 
     .flyer-container {
         width: 100%;
-        max-width: 600px; /* Para que no sea demasiado grande en pantallas grandes */
+        max-width: 600px; 
     }
 
     .flyer-container img {
-        width: 100%; /* Imagen ocupa todo el ancho */
+        width: 100%; 
         border-radius: 8px;
     }
 }

@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -27,21 +27,21 @@ body {
 
 .title {
   font-family: "Work Sans", sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 2rem;
   font-weight: 500;
 }
 
 .bold {
   font-family: "Work Sans", sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 2rem;
   font-weight: 900;
 }
 
 .paragraph {
   font-family: "Work Sans", sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 400;
 }

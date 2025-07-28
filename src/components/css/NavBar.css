@@ -10,15 +10,13 @@
     z-index: 1000;
 }
 
-/* Ícono de hamburguesa solo en mobile */
 .hamburger-icon {
     display: none;
     font-size: 2rem;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
-/* Menú hamburguesa (oculto por defecto) */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -32,10 +30,8 @@
     justify-content: center;
     transform: translateX(100%);
     z-index: 1100;
-    /* Asegura que está encima */
 }
 
-/* Botón de cerrar dentro del menú */
 .close-menu {
     position: absolute;
     top: 1rem;
@@ -45,7 +41,6 @@
     cursor: pointer;
 }
 
-/* Estilos para enlaces */
 .mobile-link {
     color: white;
     font-size: 2rem;
@@ -69,7 +64,7 @@
 }
 
 .nav-link {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: 500;
 }
@@ -78,7 +73,6 @@
     color: gray;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .header {
         background: rgba(0, 0, 0, 0.85);
