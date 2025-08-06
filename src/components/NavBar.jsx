@@ -11,92 +11,116 @@ import "./css/NavBar.css";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const NavBar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        ScrollTrigger.create({
-            start: "top top",
-            end: "bottom bottom",
-            onUpdate: (self) => {
-                const nav = document.querySelector(".nav");
-                if (!nav) return;
-                gsap.to(nav, {
-                    y: self.direction === 1 ? -50 : 0,
-                    opacity: self.direction === 1 ? 0 : 1,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
-            },
+  useEffect(() => {
+    ScrollTrigger.create({
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        const nav = document.querySelector(".nav");
+        if (!nav) return;
+        gsap.to(nav, {
+          y: self.direction === 1 ? -50 : 0,
+          opacity: self.direction === 1 ? 0 : 1,
+          duration: 0.3,
+          ease: "power2.out",
         });
+      },
+    });
 
-        return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    }, []);
+    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }, []);
 
-    const handleLinkClick = (e) => {
-        e.preventDefault();
-        const targetId = e.currentTarget.getAttribute("href");
-        const target = document.querySelector(targetId);
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href"); // e.g., "#events"
+    const targetElement = document.querySelector(targetId);
 
-        if (target) {
-            gsap.to(".mobile-menu", {
-                x: "100%",
-                duration: 0.4,
-                ease: "power3.out",
-                onComplete: () => {
-                    setMenuOpen(false);
-                    gsap.to(window, {
-                        scrollTo: { y: target.offsetTop, autoKill: true },
-                        duration: 1.5,
-                        ease: "power3.inOut"
-                    });
-                }
+    if (targetElement) {
+      // Close mobile menu if open
+      if (menuOpen) {
+        gsap.to(".mobile-menu", {
+          x: "100%",
+          duration: 0.4,
+          ease: "power3.out",
+          onComplete: () => {
+            setMenuOpen(false);
+            // Scroll to the target element
+            gsap.to(window, {
+              scrollTo: { y: targetElement, offsetY: 50 }, // Use element directly, with optional offset
+              duration: 1,
+              ease: "power3.inOut",
             });
-        }
-    };
-
-    const toggleMenu = () => {
-        setMenuOpen(prev => {
-            const newState = !prev;
-            gsap.to(".mobile-menu", {
-                x: newState ? "0%" : "100%",
-                duration: 0.5,
-                ease: "power3.out"
-            });
-            return newState;
+          },
         });
-    };
+      } else {
+        // Scroll immediately if menu is not open
+        gsap.to(window, {
+          scrollTo: { y: targetElement, offsetY: 50 },
+          duration: 1,
+          ease: "power3.inOut",
+        });
+      }
+    } else {
+      console.error(`Target element ${targetId} not found in the DOM`);
+    }
+  };
 
-    return (
-        <header className="header">
-            <div className="logo">
-                <img src={Logo} alt="Prana Logo" className="logoNav" />
-            </div>
+  const toggleMenu = () => {
+    setMenuOpen((prev) => {
+      const newState = !prev;
+      gsap.to(".mobile-menu", {
+        x: newState ? "0%" : "100%",
+        duration: 0.5,
+        ease: "power3.out",
+      });
+      return newState;
+    });
+  };
 
-            <nav className="nav">
-                <a href="#about" className="nav-link" onClick={handleLinkClick}>ACERCA DE NOSOTROS</a>
-                <a href="#events" className="nav-link" onClick={handleLinkClick}>PRÓXIMOS EVENTOS</a>
-                <a href="#contact" className="nav-link" onClick={handleLinkClick}>CONTACTO</a>
-            </nav>
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src={Logo} alt="Prana Logo" className="logoNav" />
+      </div>
 
-            <div className="icon">
-                <img src={Bacteria} alt="Decorative Icon" className="bacteria" />
-            </div>
+      <nav className="nav">
+        <a href="#about" className="nav-link" onClick={handleLinkClick}>
+          ACERCA DE NOSOTROS
+        </a>
+        <a href="#galery" className="nav-link" onClick={handleLinkClick}>
+          ULTIMO EVENTO
+        </a>
+        <a href="#contact" className="nav-link" onClick={handleLinkClick}>
+          CONTACTO
+        </a>
+      </nav>
 
-            <div className="hamburger-icon" onClick={toggleMenu}>
-                <FontAwesomeIcon icon={faBars} />
-            </div>
+      <div className="icon">
+        <img src={Bacteria} alt="Decorative Icon" className="bacteria" />
+      </div>
 
-            <div className="mobile-menu">
-                <div className="close-menu" onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={faTimes} />
-                </div>
+      <div className="hamburger-icon" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+      </div>
 
-                <a href="#about" className="mobile-link" onClick={handleLinkClick}>ACERCA DE NOSOTROS</a>
-                <a href="#events" className="mobile-link" onClick={handleLinkClick}>PRÓXIMOS EVENTOS</a>
-                <a href="#contact" className="mobile-link" onClick={handleLinkClick}>CONTACTO</a>
-            </div>
-        </header>
-    );
+      <div className="mobile-menu">
+        <div className="close-menu" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faTimes} />
+        </div>
+        <a href="#about" className="mobile-link" onClick={handleLinkClick}>
+          ACERCA DE NOSOTROS
+        </a>
+        <a href="#galery" className="mobile-link" onClick={handleLinkClick}>
+          ULTIMO EVENTO
+        </a>
+        <a href="#contact" className="mobile-link" onClick={handleLinkClick}>
+          CONTACTO
+        </a>
+      </div>
+    </header>
+  );
 };
 
 export default NavBar;

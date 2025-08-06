@@ -32,7 +32,7 @@ const Second = () => {
             <div className="info-box">
               <button onClick={handlePurchaseClick}>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=3816574462&text=Hola!%20Vengo%20de%20la%20web%20de%20Prana,%20quiero%20mí%20beneficio!"
+                  href="https://api.whatsapp.com/send/?phone=3816574462&text=Hola!%20Como%20te%20va?%20Vengo%20de%20la%20web%20de%20Prana,%20quiero%20comprar%20una%20entrada!"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

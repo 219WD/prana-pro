@@ -1,5 +1,5 @@
 .footer {
-    background-color: #616348;
+    background-color: #000;
     padding: 20px;
     width: 100%;
 }
@@ -73,7 +73,7 @@
 }
 
 .footer-list a:hover {
-    color: #000;
+    color: #939393;
 }
 
 .footer-bottom {
@@ -85,6 +85,10 @@
     border-top: 1px solid #fff;
 }
 
+.footer-bottom p {
+    color: #fff;
+}
+
 .footer-links a {
     margin-left: 10px;
     text-decoration: none;
@@ -93,7 +97,7 @@
 }
 
 .footer-links a:hover {
-    color: #000;
+    color: #939393;
 }
 
 @media (max-width: 768px) {
